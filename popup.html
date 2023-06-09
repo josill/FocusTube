@@ -2,14 +2,49 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>My Extension Popup</title>
 </head>
 <body>
-    <h1>Welcome to My Extension</h1>
-    <p>This is the popup of my Chrome extension.</p>
-
-    <button id="opacityBtn">Blur Thumbnails</button>
-    <button id="blackBtn">Black Thumbnails</button>
+    <h1>FocusTube</h1>
+    <h2>Here you can configure settings to your liking</h2>
+    <div class="option-container">
+        <div class="thumbnails-toggle-container">
+            <div class="thumbnails-show-toggle">
+                <input type="checkbox" class="toggle" id="thumbnailsToggle"></input>
+                <label for="thumbnailsToggle" class="toggle-label"></label>
+                <p>Hide thumbnails</p>
+            </div>
+            <div class="thumbnails-hide-options-toggle">
+                <input type="checkbox" id="blurBtn"/>
+                <label for="blurBtn"></label>
+                <p class="p-small">Blurred thumbnails</p>
+            </div>
+            <div class="thumbnails-hide-options-toggle">
+                <input type="checkbox" id="blackBtn"/>
+                <label for="blackBtn"></label>
+                <p class="p-small">Black thumbnails</p> 
+            </div> 
+        </div>
+        <div class="preview-toggle-container">
+            <input type="checkbox" id="previewsToggle"></input>
+            <label for="previewsToggle"></label>
+            <p>Disable video previews</p>
+        </div>
+        <div class="recommendations-toggle-container">
+            <input type="checkbox" id="recommendationsToggle"></input>
+            <label for="recommendationsToggle"></label>
+            <p>Disable recommendations</p>            
+        </div>
+        <div class="comments-toggle-container">
+            <input type="checkbox" id="commentsToggle"></input>
+            <label for="commentsToggle"></label>
+            <p>Disable comments</p>
+        </div>
+    </div>
     <script src="popup.js"></script>
 </body>
 

@@ -5,7 +5,8 @@
   "description": "Description of your extension",
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "action": {
     "default_popup": "popup.html"

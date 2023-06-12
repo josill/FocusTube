@@ -1,10 +1,59 @@
-input[type=checkbox] {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  min-width: 300px;
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+.mode-container {
+  background: rgba(165, 170, 174, 0.25);
+  box-shadow: inset 0 2px 8px 0 rgba(165, 170, 174, 0.25);
+  border-radius: 24px;
+  display: inline-block;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: row;
+  transition: all 500ms ease;
+  margin-top: 10px;
+}
+
+.mode-toggle {
+  border-radius: 22px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  background-color: transparent;
+  border: 0px solid transparent;
+  margin: 2px;
+  color: #727C8F;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.mode-toggle.active {
+  background-image: linear-gradient(-180deg, #fff 0%, #FAFAFA 81%, #F2F2F2 100%);
+  border: 1px solid rgba(207, 207, 207, 0.6);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  color: #6744B1;
+  font-weight: 500;
+  transition: all .5s ease-in;
+}
+
+.mode-toggle:focus {
+  outline: none;
+}
+
+.toggle-options {
   height: 0;
   width: 0;
   visibility: hidden;
 }
 
-label {
+.label-options {
   cursor: pointer;
   text-indent: -9999px;
   width: 50px;
@@ -15,7 +64,7 @@ label {
   position: relative;
 }
 
-label:after {
+.label-options:after {
   content: "";
   position: absolute;
   top: 5px;
@@ -27,27 +76,17 @@ label:after {
   transition: 0.3s;
 }
 
-input:checked + label {
+.toggle-options:checked + .label-options {
   background: #bada55;
 }
 
-input:checked + label:after {
+.toggle-options:checked + .label-options:after {
   left: calc(100% - 5px);
   transform: translateX(-100%);
 }
 
 label:active:after {
   width: 40px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  min-width: 300px;
-  font-family: 'Montserrat', 'sans-serif';
 }
 
 p {
@@ -102,6 +141,12 @@ p {
 }
 
 .comments-toggle-container {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.sidebar-toggle-container {
     display: flex;
     column-gap: 8px;
     align-items: center;

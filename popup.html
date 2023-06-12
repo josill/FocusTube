@@ -9,40 +9,50 @@
     <title>My Extension Popup</title>
 </head>
 <body>
+    <div class="mode-container">
+        <button class="mode-toggle" id="light-mode-toggle">Light</button>        
+        <button class="mode-toggle" id="focus-mode-toggle">Focus</button>        
+        <button class="mode-toggle" id="custom-mode-toggle">Custom</button>        
+    </div>
     <h1>FocusTube</h1>
     <h2>Here you can configure settings to your liking</h2>
     <div class="option-container">
         <div class="thumbnails-toggle-container">
             <div class="thumbnails-show-toggle">
-                <input type="checkbox" class="toggle" id="thumbnailsToggle"></input>
-                <label for="thumbnailsToggle" class="toggle-label"></label>
+                <input type="checkbox" class="toggle-options" id="thumbnailsToggle"></input>
+                <label for="thumbnailsToggle" class="label-options"></label>
                 <p>Hide thumbnails</p>
             </div>
             <div class="thumbnails-hide-options-toggle">
-                <input type="checkbox" id="blurBtn"/>
-                <label for="blurBtn"></label>
+                <input type="checkbox" class="toggle-options" id="blurBtn"/>
+                <label for="blurBtn" class="label-options"></label>
                 <p class="p-small">Blurred thumbnails</p>
             </div>
             <div class="thumbnails-hide-options-toggle">
-                <input type="checkbox" id="blackBtn"/>
-                <label for="blackBtn"></label>
+                <input type="checkbox" class="toggle-options" id="blackBtn"/>
+                <label for="blackBtn" class="label-options"></label>
                 <p class="p-small">Black thumbnails</p> 
             </div> 
         </div>
         <div class="preview-toggle-container">
-            <input type="checkbox" id="previewsToggle"></input>
-            <label for="previewsToggle"></label>
+            <input type="checkbox" class="toggle-options" id="previewsToggle"></input>
+            <label for="previewsToggle" class="label-options"></label>
             <p>Disable video previews</p>
         </div>
         <div class="recommendations-toggle-container">
-            <input type="checkbox" id="recommendationsToggle"></input>
-            <label for="recommendationsToggle"></label>
+            <input type="checkbox" class="toggle-options" id="recommendationsToggle"></input>
+            <label for="recommendationsToggle" class="label-options"></label>
             <p>Disable recommendations</p>            
         </div>
         <div class="comments-toggle-container">
-            <input type="checkbox" id="commentsToggle"></input>
-            <label for="commentsToggle"></label>
+            <input type="checkbox" class="toggle-options" id="commentsToggle"></input>
+            <label for="commentsToggle" class="label-options"></label>
             <p>Disable comments</p>
+        </div>
+        <div class="sidebar-toggle-container">
+            <input type="checkbox" class="toggle-options" id="sidebarToggle"></input>
+            <label for="sidebarToggle" class="label-options"></label>
+            <p>Disable sidebar</p>
         </div>
     </div>
     <script src="popup.js"></script>

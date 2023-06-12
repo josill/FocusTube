@@ -15,11 +15,7 @@
     {
       "matches": ["<all_urls>"],
       "js": ["contentScript.js"],
-      "css": ["styles.css"],
-       "run_at": "document_start"
+      "run_at": "document_start"
     }
-  ],
-  "background": {
-    "service_worker": "background.js"
-  }
+  ]
 }
